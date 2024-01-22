@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "module": "commonjs",
+      "jsx": "react-jsx",
+      "resolveJsonModule": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,  
+      "moduleResolution": "node",
+      "declaration": true,
+    }
+  }
+  
