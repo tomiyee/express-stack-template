@@ -14,6 +14,8 @@ To begin development, make sure that you have the following already installed:
 - pnpm
 - Docker (for the database)
 
+If copying this repository as a template, I highly recommend adding branch protections and requiring that GitHub actions pass before you allow a PR to merge.
+
 ## Deployment
 
 To deploy the full-stack, follow these instructions:
