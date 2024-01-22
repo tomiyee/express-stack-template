@@ -1,15 +1,24 @@
 {
-    "compilerOptions": {
-      "strict": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "module": "commonjs",
-      "jsx": "react-jsx",
-      "resolveJsonModule": true,
-      "forceConsistentCasingInFileNames": true,
-      "noFallthroughCasesInSwitch": true,  
-      "moduleResolution": "node",
-      "declaration": true,
-    }
+  "compilerOptions": {
+    "target": "ES6",
+
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "noEmit": false,
+
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    "declaration": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,  
   }
-  
+}

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { DEFAULT_NUMBER } from 'common';
+import {DEFAULT_NUMBER} from 'common';
 
 function App() {
   const DEFAULT_INCREMENT = 2;
