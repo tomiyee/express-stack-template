@@ -21,6 +21,7 @@ pnpm install react
 
 Next, add a new `tsconfig.json` that extends the base tsconfig with the following contents:
 ```json
+// packages/<package-name>/tsconfig.json
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
@@ -29,6 +30,7 @@ Next, add a new `tsconfig.json` that extends the base tsconfig with the followin
   }
 }
 ```
+If you chose not to make a `/src` directry, you can omit the `"rootDir"` attribute of the suggested config
 
 ## 3. Configure the Package.json
 
