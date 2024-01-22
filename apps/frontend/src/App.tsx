@@ -2,11 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {DEFAULT_NUMBER} from 'common';
+import { DEFAULT_COUNTER_VALUE } from 'common';
 
 function App() {
   const DEFAULT_INCREMENT = 2;
-  const [count, setCount] = useState(DEFAULT_NUMBER)
+  const [count, setCount] = useState(DEFAULT_COUNTER_VALUE);
 
   return (
     <>
