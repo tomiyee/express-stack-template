@@ -39,21 +39,29 @@ I've personally used and disliked Python frontend frameworks, finding it less in
 
 To supplement the development process, I added a Typescript linter `ESLint` and the Javascript styling packages `Prettier`. These two packages will make sure that any developers that cooperate on this project spend less time debugging or debating how to style their code and more time writing working software in any part of the stack.  
 
-### 1.3 Docker
+### 1.3 Github Actions
+
+Additionally, there are a minimal set of GitHub actions that will run to ensure any incoming code satisfies the Prettier and ESLint 
+
+When making use of this template, be sure to:
+1. Protect the `main` branch
+2. Require GitHub actions be passing before allowing merge
+
+### 1.4 Docker
 
 To simplify setup for the database, I've decided to take advantage of Docker and its simplicity when setting up a development instance of the database. The focus of this project is not on the specific database, and by taking advantage of Docker, I can minimize the impact a change in database would have on this project. 
 
-## 2. Frontend (React + Vite)
+## 2. Frontend - React and Vite.js
 
 For the frontend application, I chose to implement it in React for its large presence in current Frontend software development and thus improve its long-term maintainability. The large React community also offers a wide range of libraries for further customization of the template.
 
 For the React Framework, I chose Vite because of its flexibility and unopinionated nature, particularly when compared to Next.js. Because I imagine this template being used for small side-projects or applications, I don't believe there is much gain for the added complexity of the Server-Side Rendering (SSR) offered by Next.js.
 
-### 2.1 UI Framework (Material UI)
+### 2.1 UI Framework - Material UI
 
 For quick development of the UI, I am choosing Material UI for its long-term support, large community, wide range of icons, and top-tier documentation.
 
-### 2.2 State Management (Zustand)
+### 2.2 State Management - Zustand
 
 For statemanagement, I've chosen to implement the template with Zustand for its reduced boiler plate, its larger team of developers, its demonstrated history of robustness, and its settled API.
 
