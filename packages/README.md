@@ -1,8 +1,12 @@
-# Adding Utility Packages
+# Packages
+
+It is common for monorepos to be divided into `/packages` (utilities and libraries) and `/apps` (applications that import the packages).
+
+## Adding Utility Packages
 
 Follow these steps to add a new package to the monorepo. 
 
-## 1. Prepare the New Package Workspace
+### 1. Prepare the New Package Workspace
 
 To add a new package to the mono repo, create and initialize it using the following commands.
 
@@ -17,7 +21,7 @@ pnpm install typescript -D
 pnpm install react
 ```
 
-## 2. Configure Typescript
+### 2. Configure Typescript
 
 Next, add a new `tsconfig.json` that extends the base tsconfig with the following contents:
 ```json
@@ -32,7 +36,7 @@ Next, add a new `tsconfig.json` that extends the base tsconfig with the followin
 ```
 If you chose not to make a `/src` directry, you can omit the `"rootDir"` attribute of the suggested config
 
-## 3. Configure the Package.json
+### 3. Configure the Package.json
 
 Update the `package.json` to include the entry point
 
@@ -46,7 +50,7 @@ Update the `package.json` to include the entry point
 }
 ```
 
-# Using Utility Packages
+## Using Utility Packages
 
 To import a package into any workspace, run the following command in the root of the monorepo.
 
