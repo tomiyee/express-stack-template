@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "nodenext",
+    "skipLibCheck": true,
+    "lib": ["ESNext"],
+
+    "moduleResolution": "nodenext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+
+    /* Linting */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true
+  },
+  "exclude": ["node_modules"]
+}
