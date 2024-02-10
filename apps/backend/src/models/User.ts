@@ -4,8 +4,8 @@ import {
   InferAttributes,
   InferCreationAttributes,
   Model,
-} from "sequelize";
-import { sequelize } from "../database.js";
+} from 'sequelize';
+import { sequelize } from '../database.js';
 
 class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   // 'CreationOptional' marks the field as optional when

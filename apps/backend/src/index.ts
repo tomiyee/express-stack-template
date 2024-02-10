@@ -18,7 +18,7 @@ const app = express();
 // See middleware for more details on how this works.
 app.use(
   session({
-    secret: "eight-bar-line",
+    secret: 'eight-bar-line',
     cookie: { secure: false },
     resave: true,
     saveUninitialized: true,

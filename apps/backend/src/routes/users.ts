@@ -1,11 +1,11 @@
-import express, { Request, Response } from "express";
-import User from "../models/User.js";
+import express, { Request, Response } from 'express';
+import User from '../models/User.js';
 import {
   userIsLoggedIn,
   userIsNotLoggedIn,
   validatePassword,
   validateUsername,
-} from "./middleware.js";
+} from './middleware.js';
 
 type ReqBody<T> = Request<unknown, unknown, T>;
 
@@ -21,7 +21,7 @@ const usersRouter = express.Router();
  * @throws {409} if the username already exists
  */
 usersRouter.post(
-  "/",
+  '/',
   [userIsNotLoggedIn],
   async (req: ReqBody<PostUserReqBody>, res: Response) => {
     // Verify that the username meets all requirements
@@ -71,12 +71,12 @@ type PostUserReqBody = {
  * @throws {409} if the username does not exist
  */
 usersRouter.delete(
-  "/",
+  '/',
   [userIsLoggedIn],
   async (req: ReqBody<DeleteUserReqBody>, res: Response) => {
     // Sends an error if  they are trying to delete someone else's account
     if (req.body.username !== req.session.username)
-      return res.status(403).send("You can only delete your own account");
+      return res.status(403).send('You can only delete your own account');
 
     const { username } = req.body;
     await User.destroy({ where: { username } });
@@ -97,17 +97,17 @@ type DeleteUserReqBody = {
  * @throws {403} if the user is trying to log in but is already logged in
  */
 usersRouter.post(
-  "/session/",
+  '/session/',
   [userIsNotLoggedIn],
   async (req: ReqBody<PostSessionReqBody>, res: Response) => {
     // Throw an error if they are already logged in.
     if (req.session.username !== undefined)
-      return res.status(403).send("You are already signed in.");
+      return res.status(403).send('You are already signed in.');
 
     // Throw an error if the login credentials are not correct
     const user = await User.findOne({ where: { username: req.body.username } });
     if (user === null)
-      return res.status(400).send("Username or password is incorrect.");
+      return res.status(400).send('Username or password is incorrect.');
 
     req.session.username = req.body.username;
     return res.sendStatus(200);
@@ -126,11 +126,11 @@ type PostSessionReqBody = {
  * @throws {401} if the user is not logged in
  */
 usersRouter.delete(
-  "/session",
+  '/session',
   [userIsLoggedIn],
   (req: Request, res: Response) => {
     if (req.session.username)
-      return res.status(401).send("Trying to log out while not logged in.");
+      return res.status(401).send('Trying to log out while not logged in.');
     req.session.username = undefined;
     return res.sendStatus(200);
   },

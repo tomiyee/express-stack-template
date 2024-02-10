@@ -1,13 +1,13 @@
-import { RequestHandler } from "express";
+import { RequestHandler } from 'express';
 
 /**
  * Returns true if the given password meets all requirements
  */
 export const validateUsername = (username?: string): string | undefined => {
   if (username === undefined) return "'username' is a required field";
-  if (username.length < 3) return "Username must be at least 3 characters long";
+  if (username.length < 3) return 'Username must be at least 3 characters long';
   if (username.length > 20)
-    return "Username must be at most 20 characters long";
+    return 'Username must be at most 20 characters long';
   return undefined;
 };
 
@@ -16,7 +16,7 @@ export const validateUsername = (username?: string): string | undefined => {
  */
 export const validatePassword = (password?: string): string | undefined => {
   if (password === undefined) return "'password' is a required field";
-  if (password.length < 8) return "Password must be at least 8 characters long";
+  if (password.length < 8) return 'Password must be at least 8 characters long';
   return undefined;
 };
 
@@ -29,7 +29,7 @@ export const validatePassword = (password?: string): string | undefined => {
  */
 export const userIsLoggedIn: RequestHandler = (req, res, next) => {
   if (req.session?.username === undefined)
-    return res.status(401).send("You are not logged in");
+    return res.status(401).send('You are not logged in');
   return next();
 };
 
@@ -40,6 +40,6 @@ export const userIsLoggedIn: RequestHandler = (req, res, next) => {
  */
 export const userIsNotLoggedIn: RequestHandler = (req, res, next) => {
   if (req.session?.username !== undefined)
-    return res.status(403).send("You are already logged in");
+    return res.status(403).send('You are already logged in');
   return next();
 };

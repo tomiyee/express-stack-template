@@ -1,5 +1,10 @@
-import { CreationOptional, InferAttributes, InferCreationAttributes, Model } from "sequelize";
-import User from "./User.js";
+import {
+  CreationOptional,
+  InferAttributes,
+  InferCreationAttributes,
+  Model,
+} from 'sequelize';
+import User from './User.js';
 
 class Task extends Model<InferAttributes<Task>, InferCreationAttributes<Task>> {
   declare id: CreationOptional<string>;
