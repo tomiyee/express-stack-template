@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint . --ext .ts --ext .tsx --max-warnings 0",
+    "db": "sudo bash ./scripts/start_db.bash",
     "style": "prettier --write .",
     "style-check": "prettier --check ."
   },

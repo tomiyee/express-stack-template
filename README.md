@@ -16,6 +16,35 @@ To begin development, make sure that you have the following already installed:
 
 If copying this repository as a template, I highly recommend adding branch protections and requiring that GitHub actions pass before you allow a PR to merge.
 
+### Starting Docker
+
+Have docker installed. This script will ask for `sudo` permissions to run docker. 
+
+TODO: Probably add instructions to create a user group with docker command permissions so this command is less intimidating. 
+
+```bash
+pnpm db
+```
+
+This command will pull the public `postgres` docker image, maintained by Postrgres, and host it with the settings in `database.env`. See `./scripts/README.md` for more details.
+
+
+### Starting the Backend Development
+
+> Make sure that the database is running. The backend will crash if it cannot connect to the databases. 
+
+```bash
+pnpm --filter backend dev
+```
+
+Any changes to the backend will automatically compile and reload the backend.
+
+### Starting the Frontend Development Server
+
+```bash
+pnpm --filter frontend dev
+```
+
 ## Deployment
 
 To deploy the full-stack, follow these instructions:

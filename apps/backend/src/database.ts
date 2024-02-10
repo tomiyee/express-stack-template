@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
 
-const DEFAULT_PG_DATABASE = 'express-react-template';
+const DEFAULT_PG_DATABASE = 'express_react_db';
 const DEFAULT_PG_USERNAME = 'user';
 const DEFAULT_PG_PASSWORD = 'mysecretpassword';
 
