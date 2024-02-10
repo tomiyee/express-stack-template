@@ -2,11 +2,31 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node --experimental-modules --es-module-specifier-resolution=node dist/index.js",
+    "dev": "npm run build && concurrently \"tsc -w\" \"nodemon --experimental-modules --experimental-specifier-resolution=node  dist/index.js\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.36.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.17.10",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3",
+    "typescript": "^5.3.3"
+  }
 }
