@@ -1,4 +1,4 @@
-import { Button, Stack, TextField, Typography } from '@mui/material';
+import { Alert, Button, Stack, TextField, Typography } from '@mui/material';
 import { assertUnreached } from 'common';
 import React, { useState } from 'react';
 
@@ -29,6 +29,9 @@ const LoginForm: React.FC<{ setMode: (arg0: LoginMode) => void }> = ({
 }) => {
   return (
     <Stack>
+      <Alert severity="warning">
+        For now, passwords are stored insecurely. Do not use a real password.
+      </Alert>
       <TextField label="Username" />
       <TextField label="Password" />
       <Button variant="contained">Log in</Button>
