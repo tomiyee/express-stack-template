@@ -1,5 +1,6 @@
 import { useRoutes } from 'react-router-dom';
-import mainRoutes from './mainRoutes';
+import MainRoutes from './mainRoutes';
+import ErrorRoutes from './errorRoutes';
 
 /**
  * React functional component for rendering the routes.
@@ -7,6 +8,6 @@ import mainRoutes from './mainRoutes';
  * @returns The rendered routes.
  */
 const Routes: React.FC = () => {
-  return useRoutes([mainRoutes]);
+  return useRoutes([MainRoutes, ErrorRoutes]);
 };
 export default Routes;

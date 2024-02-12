@@ -1,4 +1,3 @@
-
 /**
  * This utility function is used to assert that a switch statement is exhaustive.
  * This has the added benefit of throwing an error if the enum is extended and
@@ -24,7 +23,7 @@
  */
 export const assertUnreached = (obj: never): never => {
   throw new Error(`Unreached case: ${obj}`);
-}
+};
 
 /**
  * An assertion that the given value is not undefined. This helps with Typescript's

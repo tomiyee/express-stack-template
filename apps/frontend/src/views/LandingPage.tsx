@@ -2,7 +2,7 @@ import { Stack, Typography } from '@mui/material';
 
 const LandingPage: React.FC = () => {
   return (
-    <Stack spacing={1}>
+    <Stack spacing={1} alignItems="center" justifyContent="center">
       <Typography variant="h1">Welcome to the Todo List</Typography>
       <Typography variant="body1">
         This is a simple todo list application.
