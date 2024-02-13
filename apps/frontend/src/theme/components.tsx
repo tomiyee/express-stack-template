@@ -27,12 +27,5 @@ const getComponentOverrides = (theme: Theme) => ({
       },
     },
   },
-  Menu: {
-    styleOverrides: {
-      '.MuiMenu-list': {
-        background: 'blue',
-      },
-    },
-  },
 });
 export default getComponentOverrides;

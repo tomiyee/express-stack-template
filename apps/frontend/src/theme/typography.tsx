@@ -1,5 +1,9 @@
 import { Theme } from '@mui/material';
 
+/**
+ * @param theme The color palette to inform font color
+ * @returns MUI Typography
+ */
 const getTypographyOptions = (theme: Theme) => ({
   fontFamily: `'DM Sans', sans-serif`,
   h1: {
