@@ -10,6 +10,9 @@ const themePalette = createTheme({
     text: {
       primary: '#3A414C',
     },
+    background: {
+      default: '#f5f5f5',
+    },
   },
 });
 export default themePalette;

@@ -1,5 +1,13 @@
 # React + TypeScript + Vite
 
+## Development
+
+To run the frontend:
+```bash
+pnpm --filter frontend dev
+```
+
+
 ## Adding Environment Variables
 
 You can add environment variables to the frontend by first updating the `vite-env.d.ts` file, which gives type intellisense.

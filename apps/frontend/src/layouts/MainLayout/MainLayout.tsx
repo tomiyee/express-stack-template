@@ -23,12 +23,14 @@ const Main = styled('main')(({ theme }) => ({
   // page flashes due to layout movement on scrollbar renders,
   // (mostly when images are rendered)
   scrollbarGutter: 'stable',
+  background: theme.palette.background.default,
   flex: 1,
   overflow: 'auto',
-  paddingLeft: '16px',
-  paddingRight: '16px',
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  paddingTop: theme.spacing(2),
   [theme.breakpoints.up('md')]: {
-    paddingLeft: '40px',
-    paddingRight: '40px',
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
   },
 }));
